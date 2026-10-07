@@ -1,5 +1,16 @@
 # drawling — R5 drawing studio
 
+## CLion: CMake is IDE metadata only
+
+Open this repository root as a CMake project. `CMakeLists.txt` is an IDE-only
+blueprint entry: there are no production sources or C23 source targets yet,
+so there is nothing to provide semantic diagnostics or inlay hints for.
+No fake declarations, dependency downloads, linking or application runner are
+wired into it. IDE appearance is user-verified.
+
+Future builds belong to [b](https://github.com/vex-graph/b). No runnable painting
+target or standalone runtime build is claimed by this metadata entry.
+
 **Role:** R5 Interactable — GIMP/Krita/FlipaClip target: layers, brushes,
 frame-by-frame animation, canvas-first workflow.
 **Status:** stub (LICENSE only; no studio code yet).
