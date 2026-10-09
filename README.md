@@ -11,9 +11,18 @@ wired into it. IDE appearance is user-verified.
 Future builds belong to [b](https://github.com/vex-graph/b). No runnable painting
 target or standalone runtime build is claimed by this metadata entry.
 
-**Role:** R5 Interactable — GIMP/Krita/FlipaClip target: layers, brushes,
+## Current State
+
+**Draft — not finalized.** Every contract below is a design goal.
+
+**Role:** R5 interactable — GIMP/Krita/FlipaClip target: layers, brushes,
 frame-by-frame animation, canvas-first workflow.
-**Status:** stub (LICENSE only; no studio code yet).
+
+**Implemented and proven:** nothing. `LICENSE`, `CONTRIBUTING.md`, `README.md`,
+`.gitignore` and an IDE-only `LANGUAGES NONE` `CMakeLists.txt` only; no `src/`,
+no studio code and no test partition.
+
+**Platforms proven:** none.
 
 ## What it is
 `drawling` is the end-user painting and 2D animation application: brush
@@ -24,13 +33,22 @@ supervised as an R1 `Application` by the `hotcwap` Kernel.
 Borrows shapes from R1–R4 (arenas, windows, GPU, UI) to build; owns no
 OS/window/memory management itself. Standalone-capable or Kernel-registered.
 
-**Unfinished application:** this is a drawing-studio blueprint, not a shipped
-painting product. R2 comprises Vexspoke CPU computation/behavior and Relational
-Engine memory/storage, stable rows, bindings and native C search. Migration is
-staged; existing Vexspoke memory/container ABI and default allocator remain.
-R1 owns lifetimes/residency; GPU shaders/dispatch remain Graphvex R3. No C/Rust
-atomic layout equivalence, automatic schema migration or implemented app
-integration is implied. See the ecosystem readiness Gist for scope and gaps.
+## Scope and Limitations
+
+**Scope (intended):** the end-user painting and 2D animation application — brush
+engines on `graphvex` raster/SDF, layer UI on `darling-framework`, supervised as
+an R1 `Application` by the `hotcwap` Kernel.
+
+**Deliberately not covered:** no OS/window/memory management (borrowed from
+R1–R4); GPU shaders/dispatch remain Graphvex R3; no ecosystem contract is owned
+here.
+
+**Known limits and gaps:** this is a drawing-studio blueprint, not a shipped
+painting product. R2 is split between Vexspoke CPU computation/behavior and
+Relational Engine memory/storage/native C search; migration is staged with the
+retained Vexspoke ABI/default allocator. No C/Rust atomic-layout equivalence,
+automatic schema migration or implemented app integration is implied. See the
+ecosystem readiness Gist for scope and gaps.
 
 ## Layout
 - Studio (future): `src/` — canvas, layers, brush engines, timeline.
