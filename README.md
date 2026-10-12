@@ -5,13 +5,13 @@ target exists yet.
 
 ## Current State
 
-**Draft — not finalized.** Every contract below is a design goal.
+**Draft — unfinished, not finalized.** Every contract below is a design goal.
 
 **Role:** R5 interactable — GIMP/Krita/FlipaClip target: layers, brushes,
 frame-by-frame animation, canvas-first workflow.
 
-**Implemented and proven:** nothing. `LICENSE`, `CONTRIBUTING.md`, `README.md`,
-and `.gitignore` only; no `src/`,
+**Implemented and proven:** nothing. `LICENSE`, `CONTRIBUTING.md`, `../../README.md`,
+and `../../.gitignore` only; no `src/`,
 no studio code and no test partition.
 
 **Platforms proven:** none.
@@ -44,12 +44,12 @@ ecosystem readiness Gist for scope and gaps.
 
 ## Layout
 - Studio (future): `src/` — canvas, layers, brush engines, timeline.
-- Tests: the shared `tests/` repo hosts a `tests/drawling/` partition (mirrored
+- Tests (future): add a `tests/drawling/` partition in the shared `../../tests` repo (mirrored
   per unit, the Test Tree Mirror Law); no test file lives inside this repo's
   source directories (the Test Segregation Law).
 
 ## Laws that govern work here
-- Constitution: the [canonical preferences.md Gist](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a); real, Git-ignored workspace-root `../../../preferences.md`, not a Vexspoke file or symlink.
+- Constitution: the [canonical preferences.md Gist](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a); real, Git-ignored workspace `../../gist/PREFERENCES.md`, not a Vexspoke file or symlink.
 - Commits land in THIS repo root, one cohesive unit each; never push unless asked.
 - One public class per `.h`/`.c` pair, `(*ptr).field` (never `->`), dest-last
   params, `-Wall -Wextra -Werror`.
